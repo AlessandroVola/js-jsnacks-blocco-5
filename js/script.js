@@ -34,17 +34,22 @@ const footballTeams = [
     },
 ]
 
-
+// Generare numeri random al posto degli 0 nelle proprietà:
+// punti fatti e falli subiti
 
 for (i = 0; i < footballTeams.length; i++) {
-    const randomPoints = getRandomNumber(0, 70)
-    console.log(randomPoints)
+    const randomPoints = getRandomNumber(0, 70);
+    console.log(randomPoints);
+    footballTeams[i].points = randomPoints
+}
 
-
+for (i = 0; i < footballTeams.length; i++) {
+    const randomTimesFouled = getRandomNumber(0, 30);
+    console.log(randomTimesFouled);
+    footballTeams[i].timesFouled = randomTimesFouled;
 }
 
 console.log(footballTeams);
-
 
 function getRandomNumber(min, max) {
     const range = max - min + 1;
