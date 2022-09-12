@@ -70,11 +70,6 @@ function getRandomNumber(min, max) {
  * che hanno la posizione compresa tra i due numeri.
  */
 
-console.log(`JS SNACK 2`)
-function threeVariables(array, a, b) {
-    const array = [];
-    number = 0
-}
 
 /* SNACK 3*/
 /* 
@@ -82,3 +77,77 @@ function threeVariables(array, a, b) {
  * Dividi in due array separati le zucchine che misurano meno o più di 15cm.
  * Infine stampa separatamente quanto pesano i due gruppi di zucchine.
  */
+
+const zucchine = [
+    {
+        name: `type1`,
+        misura: 10,
+        peso: 9
+    },
+    {
+        name: `type2`,
+        misura: 11,
+        peso: 9
+
+    },
+    {
+        name: `type3`,
+        misura: 12,
+        peso: 5
+    },
+    {
+        name: `type4`,
+        misura: 13,
+        peso: 7
+    },
+    {
+        name: `type5`,
+        misura: 14,
+        peso: 7
+    },
+    {
+        name: `type6`,
+        misura: 15,
+        peso: 6
+    },
+    {
+        name: `type7`,
+        misura: 17,
+        peso: 3
+
+    },
+    {
+        name: `type8`,
+        misura: 18,
+        peso: 4
+
+    },
+    {
+        name: `type9`,
+        misura: 19,
+        peso: 2
+    },
+    {
+        name: `type10`,
+        misura: 20,
+        peso: 5
+    },
+]
+
+const moreThan15cm = []
+
+const lessThan15cm = []
+
+for (i = 0; i < zucchine.length; i++) {
+    if (zucchine[i].misura < 15) {
+        lessThan15cm.push(zucchine[i])
+    } else {
+        moreThan15cm.push(zucchine[i])
+    }
+}
+
+console.log(lessThan15cm);
+console.log(moreThan15cm);
+
+
+
